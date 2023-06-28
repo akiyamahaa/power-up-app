@@ -56,10 +56,11 @@ const PracticeDetailScreen = (props: any) => {
 
   return (
     <Box width="100%">
-      <ImageBackground
+      <ImageBackground 
         source={require('assets/icons/bg.png')}
         style={styles.bgStyle}
       />
+
       <Header title={'Nội dung thực hành'} />
       <ScrollView style={styles.cardContainer}>
         {renderImgWithContent(detail_data[0].contentWithImg)}

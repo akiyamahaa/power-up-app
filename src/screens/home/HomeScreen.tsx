@@ -23,7 +23,9 @@ const HomeScreen = (props: Props) => {
           alt="logo"
         />
         <Box mt="5">
-          <TouchableOpacity onPress={() => navigation.navigate('TheoryScreen')}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('TheoryScreen')}
+          >
             <Box style={styles.btnStyle}>
               <Text style={styles.textStyle}>Lý thuyết</Text>
             </Box>

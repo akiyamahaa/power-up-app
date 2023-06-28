@@ -1,16 +1,16 @@
-import { useNavigation, useRoute } from '@react-navigation/native';
-import { Box, Image, Text } from 'native-base';
-import { RootStackProps } from 'navigation/RootStack';
-import React, { useEffect, useState } from 'react';
-import { ImageBackground, StyleSheet, TouchableOpacity } from 'react-native';
-import color from 'utils/color';
-import bai1 from 'utils/data/qbai1';
-import bai2 from 'utils/data/qbai2';
-import bai3 from 'utils/data/qbai3';
-import bai4 from 'utils/data/qbai4';
-import bai5 from 'utils/data/qbai5';
-import bai6 from 'utils/data/qbai6';
-import { evaluateSentence } from 'utils/mockup_data';
+import { useNavigation, useRoute } from "@react-navigation/native";
+import { Box, Image, Text } from "native-base";
+import { RootStackProps } from "navigation/RootStack";
+import React, { useState } from "react";
+import { ImageBackground, StyleSheet, TouchableOpacity } from "react-native";
+import color from "utils/color";
+import bai1 from "utils/data/qbai1";
+import bai2 from "utils/data/qbai2";
+import bai3 from "utils/data/qbai3";
+import bai4 from "utils/data/qbai4";
+import bai5 from "utils/data/qbai5";
+import bai6 from "utils/data/qbai6";
+import { evaluateSentence } from "utils/mockup_data";
 
 const qbaihoc: any = {
   bai1,
@@ -23,7 +23,7 @@ const qbaihoc: any = {
 
 const ResultScreen = () => {
   const route = useRoute();
-  const navigation = useNavigation<RootStackProps['navigation']>();
+  const navigation = useNavigation<RootStackProps["navigation"]>();
   const { params }: any = route;
   // Ques Arr
   const detail_data = qbaihoc[params.file];
@@ -51,12 +51,13 @@ const ResultScreen = () => {
   return (
     <Box style={styles.root}>
       <ImageBackground
-        source={require('assets/icons/bg.png')}
+        source={require("assets/icons/bg.png")}
         style={styles.bgStyle}
       />
+
       <Box style={styles.logoContainer}>
         <Image
-          source={require('assets/icons/logo.png')}
+          source={require("assets/icons/logo.png")}
           style={styles.imageStyle}
           resizeMode="contain"
           alt="logo"
@@ -67,7 +68,7 @@ const ResultScreen = () => {
           </Text>
           <Text fontSize={20}>{result}</Text>
         </Box>
-        <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
+        <TouchableOpacity onPress={() => navigation.navigate("HomeScreen")}>
           <Box style={styles.btnStyle}>
             <Text style={styles.textStyle}>Quay trờ lại học tập</Text>
           </Box>
@@ -82,14 +83,14 @@ export default ResultScreen;
 const styles = StyleSheet.create({
   root: {},
   bgStyle: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
   logoContainer: {
-    marginTop: '10%',
-    position: 'absolute',
-    alignItems: 'center',
-    width: '100%',
+    marginTop: "10%",
+    position: "absolute",
+    alignItems: "center",
+    width: "100%",
   },
   imageStyle: {
     width: 220,
@@ -98,16 +99,16 @@ const styles = StyleSheet.create({
   btnStyle: {
     backgroundColor: color.light_red,
     borderRadius: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginTop: 20,
     marginBottom: 40,
     paddingVertical: 10,
     paddingHorizontal: 30,
   },
   textStyle: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     fontSize: 18,
-    fontFamily: 'Chewy-Regular',
+    fontFamily: "Chewy-Regular",
   },
 });
